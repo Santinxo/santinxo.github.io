@@ -1,0 +1,398 @@
+/* Estilos globales */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Lato, Arial, sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    background-color: #F3F3F3;
+    color: #272727;
+}
+
+h1 {
+    font-size: 3.5em;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+h6 {
+    font-size: 0.75em;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+a {
+    color: #F3F3F3;
+    text-decoration: none;
+}
+
+main {
+    padding-top: 9.5em;
+}
+
+img {
+    vertical-align: bottom;
+}
+
+/* Estilos del encabezado */
+
+header {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    justify-content: center;
+    width: 100%;
+    background-color: #272727;
+}
+
+.website-logo {
+    padding: 1%;
+}
+
+.website-logo img {
+    width: 60px;
+    height: 60px;
+}
+
+/* Estilos del menú de navegación */
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 6.5em;
+    padding: 0 10%;
+}
+
+.nav-menu ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 2em;
+}
+
+.nav-menu ul li {
+    font-size: 1em;
+    display: inline-block;
+    text-align: right;
+}
+
+.nav-menu ul li:last-child {
+    margin-right: 0;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    padding: 1px 1.5px;
+    display: block;
+    text-transform: uppercase;
+}
+
+.nav-menu ul li a:hover {
+    color: #FFE250;
+}
+
+.active-page {
+    color: #FFE250;
+    border-bottom: 1.5px solid #FFE250;
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #F3F3F3;
+}
+
+/* Estilos del menú móvil */
+
+.mobile-nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    padding-top: 5em;
+    gap: 2em;
+    list-style: none;
+    background-color: #272727;
+}
+
+.mobile-nav-menu li {
+    font-size: 1.5em;
+}
+
+.mobile-nav-menu li a {
+    color: #F3F3F3;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1em 2em;
+    display: block;
+}
+
+/* Estilos de contenido */
+
+.intro-content, .slider-content, .projects-content, .aboutmetext-content, .skills-aboutme-content, .contacttext-content, .intro-contacttext-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    padding-bottom: 1em;
+}
+
+.gallery-home-section {
+    display: flex;
+    gap: 1em;
+}
+
+.gallery-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.contact-title-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+    padding-bottom: 3em;
+}
+
+.contact-links-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    padding-top: 2em;
+}
+
+.contact-links-content i {
+    padding-right: 1em;
+}
+
+.skillslist-aboutme-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 1em;
+    gap: 3em;
+}
+
+.introname-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.buttons-aboutme-content {
+    display: flex;
+    justify-content: space-around;
+}
+
+.links-contacttext-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    padding: 2em 0;
+}
+
+.linkslist-contacttext-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1.5em;
+    gap: 3em;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.aboutmeimg-content {
+    padding-top: 1.5em;
+}
+
+.slider-preview img, .gallery-item img, .aboutmeimg-content img {
+    width: 100%;
+}
+
+.container {
+    margin-bottom: 3em;
+    padding: 0 10%;
+    width: 100%;
+}
+
+/* Botones */
+
+.contact-btn, .cv-btn {
+    align-items: center;
+    justify-content: center;
+    background-color: #272727;
+    color: #F3F3F3;
+    border: none;
+    border-radius: .3em;
+    padding: 1em 1.5em;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.contact-btn:hover, .cv-btn:hover {
+    color: #FFE250;
+}
+
+.link-text {
+    width: fit-content;
+    color: #FFE250;
+}
+
+.link-text:hover {
+    text-decoration: underline;
+}
+
+.social-btn {
+    align-items: center;
+    justify-content: center;
+    background-color: #272727;
+    color: #F3F3F3;
+    border: none;
+    border-radius: .3em;
+    padding: 1em;
+    transition: background-color 0.3s;
+}
+
+.social-btn:hover {
+    color: #FFE250;
+}
+
+.form-contact-content .submit-btn {
+    background-color: #272727;
+    color: #F3F3F3;
+    border: none;
+    border-radius: .3em;
+    padding: 1em 1.5em;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+    width: fit-content;
+}
+
+.form-contact-content .submit-btn:hover {
+    color: #FFE250;
+}
+
+/* Formulario de contacto */
+
+.form-contact-content input {
+    width: 100%;
+    padding: 1em;
+    margin: 0.5em 0 1.5em 0;
+    border: 1px solid #272727;
+    border-radius: .3em;
+}
+
+.form-contact-content textarea {
+    width: 100%;
+    height: 15em;
+    padding: 1em;
+    margin: 0.5em 0 1.5em 0;
+    border: 1px solid #272727;
+    border-radius: .3em;
+}
+
+.submit-form-contact-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+/* Estilos del pie de página */
+
+footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    padding: 1rem 10%;
+    width: 100%;
+    bottom: 0;
+    background-color: #272727;
+}
+
+footer p {
+    margin: 0;
+    color: #F3F3F3;
+}
+
+footer .fa-brands {
+    color: #F3F3F3;
+}
+
+footer .fa-brands:hover {
+    color: #FFE250;
+}
+
+.copyright {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    list-style: none;
+}
+
+/* Media queries */
+
+@media (max-width: 618px) {
+    .hamburger {
+        display: block;
+    }
+
+    .mobile-nav-menu {
+        display: none;
+    }
+
+    .nav-menu ul {
+        display: none;
+    }
+}
+
+@media (max-width: 818px) {
+    .social-icons {
+        justify-content: center;
+        gap: 3em;
+    }
+
+    .copyright {
+        flex-direction: column-reverse;
+        gap: 1em;
+    }
+
+    .gallery-home-section {
+        flex-direction: column;
+    }
+}
