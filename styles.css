@@ -15,7 +15,7 @@ body {
 }
 
 h1 {
-    font-size: 3.5em;
+    font-size: 4em;
     font-weight: 900;
     text-transform: uppercase;
 }
@@ -31,6 +31,11 @@ h3 {
     font-weight: 400;
 }
 
+h4 {
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
 h6 {
     font-size: 0.75em;
     font-weight: 300;
@@ -43,7 +48,7 @@ a {
 }
 
 main {
-    padding-top: 9.5em;
+    padding-top: 12em;
 }
 
 img {
@@ -156,6 +161,7 @@ header {
     flex-direction: column;
     gap: 0.5em;
     padding-bottom: 1em;
+    width: 100%;
 }
 
 .gallery-home-section {
@@ -166,7 +172,13 @@ header {
 .gallery-section {
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 2em;
+    margin-top: 1em;
+}
+
+.row-gallery-section {
+    display: flex;
+    gap: 2em;
 }
 
 .contact-title-content {
@@ -182,7 +194,6 @@ header {
     flex-direction: column;
     align-items: center;
     gap: 1em;
-    padding-top: 2em;
 }
 
 .contact-links-content i {
@@ -203,9 +214,43 @@ header {
     justify-content: space-around;
 }
 
+.aboutme-content {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+}
+
 .buttons-aboutme-content {
     display: flex;
     justify-content: space-around;
+}
+
+.aboutme-exp-edu {
+    display: flex;
+    gap: 5em;
+    justify-content: center;
+    margin-top: 5em;
+}
+
+.box-aboutme-exp-edu {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    width: 100%;
+}
+
+.item-aboutme-exp-edu {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.row-aboutme-exp-edu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .links-contacttext-content {
@@ -226,16 +271,37 @@ header {
     list-style: none;
 }
 
-.aboutmeimg-content {
-    padding-top: 1.5em;
+.gallery-item img, .aboutmeimg-content img {
+    width: 100%;
+    max-width: 100%;
+    object-position: center;
+    object-fit: cover;
+    height: 100%;
 }
 
-.slider-preview img, .gallery-item img, .aboutmeimg-content img {
+.slider-preview img {
     width: 100%;
+    max-width: 100%;
+    object-position: center;
+    object-fit: cover;
+    height: 66vh;
+}
+
+.home-projects-content {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-contact-content {
+    display: flex;
+    gap: 2em;
 }
 
 .container {
-    margin-bottom: 3em;
+    margin-bottom: 5em;
     padding: 0 10%;
     width: 100%;
 }
@@ -316,6 +382,19 @@ header {
     border-radius: .3em;
 }
 
+.column-form-contact-content {
+    display: flex;
+    gap: 2em;
+}
+
+.name-form-contact-content, .topic-form-contact-content, .email-form-contact-content, .phone-form-contact-content {
+    width: 100%;
+}
+
+.form-contact-content {
+    width: 100%;
+}
+
 .submit-form-contact-content {
     display: flex;
     flex-direction: row;
@@ -387,9 +466,22 @@ footer .fa-brands:hover {
     .introname-name-content {
         font-size: 0.81em;
     }
+
+    .gallery-home-section {
+        flex-direction: column;
+    }
+
+    .row-gallery-section {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 818px) {
+    main {
+        font-size: 0.85em;
+    }
+
     .social-icons {
         justify-content: center;
         gap: 3em;
@@ -400,7 +492,38 @@ footer .fa-brands:hover {
         gap: 1em;
     }
 
-    .gallery-home-section {
+    .column-form-contact-content {
+        display: block;
+    }
+
+    .contact-links-content {
+        padding-top: 1em;
+    }
+
+    .aboutme-content {
+        display: block;
+    }
+
+    .slider-preview img {
+        height: 100%;
+    }
+}
+
+@media (max-width: 1018px) {
+
+    .home-contact-content {
+        display: block;
+    }
+
+    .home-projects-content {
+        display: block;
+    }
+
+    .contacttext-content {
+        width: 100%;
+    }
+
+    .aboutme-exp-edu {
         flex-direction: column;
     }
 }
