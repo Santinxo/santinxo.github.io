@@ -32,22 +32,99 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-/*
-
 document.addEventListener("DOMContentLoaded", function() {
-    // Obtener la ruta actual de la URL
-    const currentPath = window.location.pathname;
 
-    // Seleccionar todos los enlaces de navegación
+    let currentPath = window.location.pathname.replace(/\/$/, '');
+    console.log("Current Path:", currentPath);
+
     const navLinks = document.querySelectorAll(".mobile-nav-menu li a");
 
-    // Iterar sobre los enlaces y comparar con la ruta actual
     navLinks.forEach(link => {
-        if (link.getAttribute("href") === currentPath) {
-            // Agregar clase para resaltar el enlace de la página actual
+        let linkPath = link.getAttribute("href").replace(/\/$/, '');
+        console.log("Link Path:", linkPath);
+
+        if (currentPath === linkPath) {
             link.classList.add("active-page");
         }
     });
 });
 
-*/
+let currentIndex = 0;
+const slides = document.querySelectorAll('.slide');
+let autoSlideInterval;
+
+function showSlide(index) {
+    if (index >= slides.length) {
+        currentIndex = 0;
+    } else if (index < 0) {
+        currentIndex = slides.length - 1;
+    } else {
+        currentIndex = index;
+    }
+
+    const slider = document.querySelector('.slider');
+    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+    updateIndicators();
+}
+
+function nextSlide() {
+    showSlide(currentIndex + 1);
+}
+
+function prevSlide() {
+    showSlide(currentIndex - 1);
+}
+
+function updateIndicators() {
+    const indicators = document.querySelectorAll('.indicator');
+    indicators.forEach((indicator, index) => {
+        indicator.classList.toggle('active', index === currentIndex);
+    });
+}
+
+function createIndicators() {
+    const sliderContainer = document.querySelector('.slider-container');
+    const indicatorsContainer = document.createElement('div');
+    indicatorsContainer.classList.add('indicators');
+
+    slides.forEach((_, index) => {
+        const indicator = document.createElement('div');
+        indicator.classList.add('indicator');
+        indicator.addEventListener('click', () => {
+            showSlide(index); 
+            resetAutoSlide();
+        });
+        indicatorsContainer.appendChild(indicator);
+    });
+
+    sliderContainer.appendChild(indicatorsContainer);
+    updateIndicators();
+}
+
+function autoSlide() {
+    autoSlideInterval = setInterval(() => {
+        nextSlide();
+    }, 5000);
+}
+
+function resetAutoSlide() {
+    clearInterval(autoSlideInterval);
+    autoSlide();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    createIndicators();
+    showSlide(0);
+    autoSlide();
+
+    document.querySelector('.prev').addEventListener('click', () => {
+        prevSlide();
+        resetAutoSlide();
+    });
+
+    document.querySelector('.next').addEventListener('click', () => {
+        nextSlide();
+        resetAutoSlide();
+    });
+});

@@ -58,6 +58,7 @@ img {
 /* Estilos del encabezado */
 
 header {
+    z-index: 20;
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -154,9 +155,120 @@ header {
     display: block;
 }
 
+/* Slider */
+
+main .home-section {
+    padding-top: 6.5em;
+}
+
+.slider-container {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    min-height: 90vh;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Controles del slider */
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2em;
+    border: none;
+    padding: 0.5em;
+    cursor: pointer;
+    background: transparent; /* Fondo transparente */
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.prev {
+    left: 1em;
+}
+
+.next {
+    right: 1em;
+}
+
+.prev:hover, .next:hover {
+    color: rgba(255, 255, 255);
+}
+
+/* Indicadores de la posición */
+
+.indicators {
+    position: absolute;
+    bottom: 2em;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.indicator {
+    height: 10px;
+    width: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.indicator.active {
+    background-color: rgba(255, 255, 255);
+}
+
+.slider {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+/* Texto flotante del slider */
+
+.introname-content {
+    position: absolute;
+    top: 9.6em;
+    left: 14%;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-introname-content {
+    position: absolute;
+    top: 8em;
+    display: flex;
+}
+
+.intro-content {
+    position: absolute;
+    top: 23em;
+    left: 14%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    width: 20em;
+}
+
+.intro-text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
 /* Estilos de contenido */
 
-.intro-content, .slider-content, .projects-content, .aboutmetext-content, .skills-aboutme-content, .contacttext-content, .intro-contacttext-content {
+.slider-content, .projects-content, .aboutmetext-content, .skills-aboutme-content, .contacttext-content, .intro-contacttext-content {
     display: flex;
     flex-direction: column;
     gap: 0.5em;
@@ -166,7 +278,7 @@ header {
 
 .gallery-home-section {
     display: flex;
-    gap: 1em;
+    gap: 2em;
 }
 
 .gallery-section {
@@ -208,12 +320,6 @@ header {
     gap: 3em;
 }
 
-.introname-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
 .aboutme-content {
     display: flex;
     flex-direction: row-reverse;
@@ -224,7 +330,7 @@ header {
 
 .buttons-aboutme-content {
     display: flex;
-    justify-content: space-around;
+    gap: 2em;
 }
 
 .aboutme-exp-edu {
@@ -279,18 +385,10 @@ header {
     height: 100%;
 }
 
-.slider-preview img {
-    width: 100%;
-    max-width: 100%;
-    object-position: center;
-    object-fit: cover;
-    height: 66vh;
-}
-
 .home-projects-content {
     display: flex;
     flex-direction: row-reverse;
-    gap: 1em;
+    gap: 3em;
     justify-content: center;
     align-items: center;
 }
@@ -303,6 +401,12 @@ header {
 .container {
     margin-bottom: 5em;
     padding: 0 10%;
+    width: 100%;
+}
+
+.home-section .container {
+    margin-bottom: 5em;
+    padding: 0;
     width: 100%;
 }
 
@@ -447,6 +551,7 @@ footer .fa-brands:hover {
 /* Media queries */
 
 @media (max-width: 618px) {
+
     .hamburger {
         display: block;
     }
@@ -475,9 +580,23 @@ footer .fa-brands:hover {
         display: flex;
         flex-direction: column;
     }
+
+    .introname-content {
+        left: 3em;
+    }
+
+    .btn-introname-content {
+        position: absolute;
+        top: 14em;
+    }
+
+    .intro-content {
+        display: none;
+    }
 }
 
 @media (max-width: 818px) {
+
     main {
         font-size: 0.85em;
     }
@@ -502,10 +621,6 @@ footer .fa-brands:hover {
 
     .aboutme-content {
         display: block;
-    }
-
-    .slider-preview img {
-        height: 100%;
     }
 }
 
