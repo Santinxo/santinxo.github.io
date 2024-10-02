@@ -37,9 +37,14 @@ h4 {
 }
 
 h6 {
-    font-size: 0.75em;
+    font-size: 0.85em;
     font-weight: 300;
     text-transform: uppercase;
+}
+
+p, li {
+    font-size: 1.15em;
+    line-height: 1.35em;
 }
 
 a {
@@ -175,7 +180,7 @@ main .home-section {
 
 .slide {
     min-width: 100%;
-    min-height: 90vh;
+    min-height: 90.5vh;
     background-size: cover;
     background-position: center;
 }
@@ -239,7 +244,7 @@ main .home-section {
 .introname-content {
     position: absolute;
     top: 9.6em;
-    left: 14%;
+    left: 10.6%;
     display: flex;
     flex-direction: column;
 }
@@ -253,7 +258,7 @@ main .home-section {
 .intro-content {
     position: absolute;
     top: 23em;
-    left: 14%;
+    left: 10.6%;
     display: flex;
     flex-direction: column;
     gap: 0.5em;
@@ -268,17 +273,34 @@ main .home-section {
 
 /* Estilos de contenido */
 
-.slider-content, .projects-content, .aboutmetext-content, .skills-aboutme-content, .contacttext-content, .intro-contacttext-content {
+.slider-content, .aboutmetext-content, .contacttext-content, .intro-contacttext-content {
     display: flex;
     flex-direction: column;
-    gap: 0.5em;
-    padding-bottom: 1em;
+    gap: 1em;
+    padding-bottom: 2em;
     width: 100%;
+}
+
+.projects-home-content {
+display: flex;
+flex-direction: column;
+gap: 0.5em;
+padding-bottom: 2em;
+width: 100%;
 }
 
 .gallery-home-section {
     display: flex;
     gap: 2em;
+}
+
+.projects-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 0 8em 4em 8em;
+    width: 100%;
+    text-align: center;
 }
 
 .gallery-section {
@@ -312,6 +334,13 @@ main .home-section {
     padding-right: 1em;
 }
 
+.skills-aboutme-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 100%;
+}
+
 .skillslist-aboutme-content {
     display: flex;
     flex-direction: row;
@@ -326,6 +355,12 @@ main .home-section {
     gap: 2em;
     justify-content: center;
     align-items: center;
+}
+
+.info-aboutmetext {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
 }
 
 .buttons-aboutme-content {
@@ -550,81 +585,7 @@ footer .fa-brands:hover {
 
 /* Media queries */
 
-@media (max-width: 618px) {
-
-    .hamburger {
-        display: block;
-    }
-
-    .mobile-nav-menu {
-        display: none;
-    }
-
-    .nav-menu ul {
-        display: none;
-    }
-
-    .introname-content {
-        gap: 7px;
-    }
-
-    .introname-name-content {
-        font-size: 0.81em;
-    }
-
-    .gallery-home-section {
-        flex-direction: column;
-    }
-
-    .row-gallery-section {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .introname-content {
-        left: 3em;
-    }
-
-    .btn-introname-content {
-        position: absolute;
-        top: 14em;
-    }
-
-    .intro-content {
-        display: none;
-    }
-}
-
-@media (max-width: 818px) {
-
-    main {
-        font-size: 0.85em;
-    }
-
-    .social-icons {
-        justify-content: center;
-        gap: 3em;
-    }
-
-    .copyright {
-        flex-direction: column-reverse;
-        gap: 1em;
-    }
-
-    .column-form-contact-content {
-        display: block;
-    }
-
-    .contact-links-content {
-        padding-top: 1em;
-    }
-
-    .aboutme-content {
-        display: block;
-    }
-}
-
-@media (max-width: 1018px) {
+@media (max-width: 1024px) {
 
     .home-contact-content {
         display: block;
@@ -640,5 +601,104 @@ footer .fa-brands:hover {
 
     .aboutme-exp-edu {
         flex-direction: column;
+    }
+
+    .slide {
+        min-height: 92vh;
+    }
+
+    .projects-content {
+        padding: 0 4em 4em 4em;
+    }
+}
+
+@media (max-width: 824px) {
+
+    main {
+        font-size: 0.85em;
+    }
+
+    .social-icons {
+        justify-content: center;
+        gap: 3em;
+    }
+
+    .copyright {
+        flex-direction: column-reverse;
+        gap: 1em;
+    }
+
+    .slide {
+        min-height: 92vh;
+    }
+
+    .column-form-contact-content {
+        display: block;
+    }
+
+    .contact-links-content {
+        padding-top: 1em;
+    }
+
+    .aboutme-content {
+        display: block;
+    }
+}
+
+@media (max-width: 624px) {
+
+    h1 {
+        font-size: 3.5em;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .mobile-nav-menu {
+        display: none;
+    }
+
+    .nav-menu ul {
+        display: none;
+    }
+
+    .introname-name-content {
+        font-size: 0.81em;
+    }
+
+    .gallery-home-section {
+        flex-direction: column;
+    }
+
+    .projects-content {
+        padding: 0 0 2em 0;
+    }
+
+    .row-gallery-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .slide {
+        min-height: 90.5vh;
+    }
+
+    .introname-content {
+        gap: 7px;
+        left: 3em;
+    }
+
+    .btn-introname-content {
+        position: absolute;
+        top: 12.5em;
+    }
+
+    .intro-content {
+        display: none;
+    }
+
+    .skillslist-aboutme-content {
+        gap: 2.8em;
     }
 }
