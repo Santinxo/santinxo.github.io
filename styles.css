@@ -10,7 +10,8 @@ body {
     font-family: Lato, Arial, sans-serif;
     font-size: 1em;
     font-weight: 400;
-    background-color: #F3F3F3;
+    background: rgb(243,243,243);
+    background: linear-gradient(180deg, rgba(243,243,243,1) 66%, rgba(39,39,39,.15) 100%);
     color: #272727;
 }
 
@@ -352,9 +353,17 @@ width: 100%;
 .aboutme-content {
     display: flex;
     flex-direction: row-reverse;
-    gap: 2em;
+    gap: 4em;
     justify-content: center;
     align-items: center;
+}
+
+.aboutmeimg-content img {
+    width: 100%;
+    max-width: 100%;
+    object-position: center;
+    object-fit: cover;
+    height: 100%;
 }
 
 .info-aboutmetext {
@@ -412,12 +421,48 @@ width: 100%;
     list-style: none;
 }
 
-.gallery-item img, .aboutmeimg-content img {
+.gallery-item {
+    position: relative;
+}
+
+.gallery-item img {
     width: 100%;
     max-width: 100%;
     object-position: center;
     object-fit: cover;
     height: 100%;
+    transition: 0.5s ease;
+    backface-visibility: hidden;
+}
+
+.gallery-item .overlay {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    gap: 2em;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.gallery-item .overlay h4 {
+    font-size: 2.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #F3F3F3;
+    text-align: center;
+}
+
+.overlay:hover {
+    opacity: 1;
 }
 
 .home-projects-content {
@@ -446,6 +491,22 @@ width: 100%;
 }
 
 /* Botones */
+
+.overlay-btn {
+    align-items: center;
+    justify-content: center;
+    background-color: #272727;
+    color: #F3F3F3;
+    border: none;
+    border-radius: .3em;
+    padding: 1em 1.5em;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.overlay-btn:hover {
+    color: #FFE250;
+}
 
 .contact-btn, .cv-btn {
     align-items: center;
@@ -656,7 +717,7 @@ footer .fa-brands:hover {
     }
 
     .contact-links-content {
-        padding-top: 1em;
+        padding-top: 4em;
     }
 
     .aboutme-content {
@@ -720,6 +781,23 @@ footer .fa-brands:hover {
     .skillslist-aboutme-content {
         gap: 2.8em;
     }
+
+.links-contacttext-content {
+    padding: 0 0 2em 0;
+}
+
+.mail-contacttext-content {
+    text-align: center;
+    padding: 1em 0 3em 0;
+}
+
+.mail-contacttext-content p {
+    line-height: 2em;
+}
+
+.mail-contacttext-content p .link-text {
+    font-size: 1.25em;
+}
 
     iframe.ad {
         width: 300px;
