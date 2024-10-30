@@ -128,3 +128,9 @@ document.addEventListener('DOMContentLoaded', () => {
         resetAutoSlide();
     });
 });
+
+const telInput = document.querySelector('input[type="tel"]');
+
+telInput.addEventListener('input', function(event) {
+    this.value = this.value.replace(/[^0-9]/g, '');
+});
