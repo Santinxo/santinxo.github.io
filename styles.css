@@ -999,4 +999,8 @@ footer .fa-brands:hover {
     .information-box {
         flex-direction: column;
     }
+
+    .project-gallery-pictures {
+        flex-direction: column;
+    }
 }
