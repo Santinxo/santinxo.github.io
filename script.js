@@ -4,19 +4,23 @@ function toggleMenu() {
 
     if (menu.style.display === "flex") {
         menu.style.display = "none";
+        hamburgerButton.innerHTML = "&#9776;"; // Restaurar hamburguesa
         hamburgerButton.setAttribute("aria-expanded", "false");
     } else {
         menu.style.display = "flex";
+        hamburgerButton.innerHTML = "&#88;"; // Cambiar a "X" al abrir el menú
         hamburgerButton.setAttribute("aria-expanded", "true");
     }
 }
 
 window.addEventListener("resize", function() {
     const menu = document.querySelector(".mobile-nav-menu");
+    const hamburgerButton = document.querySelector(".hamburger");
 
     if (window.innerWidth > 618) {
         menu.style.display = "none";
-        document.querySelector(".hamburger").setAttribute("aria-expanded", "false");
+        hamburgerButton.innerHTML = "&#9776;"; // Restaurar hamburguesa al redimensionar
+        hamburgerButton.setAttribute("aria-expanded", "false");
     }
 });
 
@@ -133,4 +137,16 @@ const telInput = document.querySelector('input[type="tel"]');
 
 telInput.addEventListener('input', function(event) {
     this.value = this.value.replace(/[^0-9]/g, '');
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('ContactForm');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        alert('Thank You! Your message has been successfully sent!');
+        
+        form.submit();
+    });
 });

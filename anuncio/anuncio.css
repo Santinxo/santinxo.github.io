@@ -53,7 +53,9 @@ a {
 }
 
 .contact-btn:hover {
-    color: #FFE250;
+    color: #272727;
+    background-color: #FFDE59;
+    transition: all 0.5s ease;
 }
 
 @media (max-width:727px) {

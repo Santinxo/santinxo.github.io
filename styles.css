@@ -54,7 +54,7 @@ a {
 
 span {
     color: #F3F3F3;
-    text-shadow: 0px 0px 10px #4c4c4c;
+    text-shadow: 0px 0px 5px #4c4c4c;
 }
 
 main {
@@ -221,7 +221,7 @@ main .home-section {
     border: none;
     padding: 0.5em;
     cursor: pointer;
-    background: transparent; /* Fondo transparente */
+    background: transparent;
     color: rgba(255, 255, 255, 0.5);
 }
 
@@ -344,6 +344,7 @@ width: 100%;
 .gallery-section {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 2em;
     margin-top: 1em;
 }
@@ -395,26 +396,6 @@ width: 100%;
     gap: 2em;
 }
 
-.project-gallery-pictures {
-    display: flex;
-    gap: 1em;
-}
-
-.project-gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-position: center;
-    object-fit: cover;
-    transition: 0.5s ease;
-    box-shadow: 0px 0px 4px #272727;
-    backface-visibility: hidden;
-}
-
-.project-gallery-item img:hover {
-    transform: translateY(-0.25em);
-    transition: all 0.5s ease;
-}
-
 .contact-title-content {
     display: flex;
     flex-direction: column;
@@ -451,7 +432,7 @@ width: 100%;
 
 .aboutme-section {
     padding: 2em 0;
-    background-color: #e3e3e3;
+    background-color: #E3E3E3;
 }
 
 .aboutme-section .container {
@@ -539,7 +520,6 @@ width: 100%;
 
 .gallery-item img {
     width: 100%;
-    height: 100%;
     object-position: center;
     object-fit: cover;
     transition: 0.5s ease;
@@ -580,6 +560,10 @@ width: 100%;
 
 .overlay:hover {
     opacity: 1;
+}
+
+.item-small {
+    max-width: 600px;
 }
 
 .home-projects-content {
@@ -951,10 +935,6 @@ footer .fa-brands:hover {
     }
 
     .information-box {
-        flex-direction: column;
-    }
-
-    .project-gallery-pictures {
         flex-direction: column;
     }
 }

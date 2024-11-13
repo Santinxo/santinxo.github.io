@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Presentación del sitio web.">
+        <meta name="keywords" content="design, graphic, web, frontend, portfolio, creative">
+        <title>Santino Giorgetti | Presentación</title>
+        <link rel="icon" href="../images/santinx-logo.png">
+        <link rel="stylesheet" href="presentacion.css">
+        <link rel="stylesheet" href="../fonts.css">
+        <script src="https://kit.fontawesome.com/1d185b2daa.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <nav class="navegador">
+                <ul>
+                    <li><a href="#inicio" class="activo">Inicio</a></li>
+                    <li><a href="#contenido">Contenido</a></li>
+                    <li><a href="#wireframe">Wireframe</a></li>
+                    <li><a href="#diseno">Diseño</a></li>
+                    <li><a href="#sitio-web">Sitio Web</a></li>
+                </ul>
+                <button class="hamburger" aria-label="Open navigation menu" aria-expanded="false" onclick="toggleMenu()"> &#9776; </button>
+            </nav>
+            <ul class="navegador-movil">
+                <li><a href="#inicio" class="activo">Inicio</a></li>
+                <li><a href="#contenido">Contenido</a></li>
+                <li><a href="#wireframe">Wireframe</a></li>
+                <li><a href="#diseno">Diseño</a></li>
+                <li><a href="#sitio-web">Sitio Web</a></li>
+            </ul>
+        </header>
+        <main class="presentacion">
+            <section id="inicio" class="diapositiva centrado fondo-oscuro">
+                <div class="titulo color-blanco">
+                    <h1>Santino Giorgetti</h1>
+                    <h2>Portfolio Sitio Web</h2>
+                    <div class="subtitulo color-blanco margen-sup">
+                        <p>Es un repositorio digital interactivo enfocado en los proyectos y las herramientas adquiridas a lo largo de mi carrera profesional, dirigido a posibles empleadores, potenciales clientes, etc.</p>
+                    </div>
+                </div>
+            </section>
+            <section id="contenido" class="diapositiva centrado">
+                <div class="titulo color-oscuro">
+                    <div class="subtitulo">
+                        <h2>Contenido del Sitio Web</h2>
+                        <p>El sitio web ofrece una visión completa de mi perfil profesional: destacando proyectos pasados, habilidades técnicas y una breve presentación personal, todo de forma clara y organizada para poder dar a conocer mi trabajo y mis aptitudes</p>
+                    </div>
+                    <div class="galeria">
+                        <div class="fila-galeria">
+                            <div class="galeria-imagen">
+                                <img src="../images/recibidor-square.jpg" alt="Mueble Recibidor Modular">
+                                <div class="overlay">
+                                    <h4><span>Mueble Recibidor Modular</span></h4>
+                                </div>
+                            </div>
+                            <div class="galeria-imagen">
+                                <img src="../images/ventilador-smartlife-square.jpg" alt="Ventilador Smartlife">
+                                <div class="overlay">
+                                    <h4><span>Ventilador Smartlife</span></h4>
+                                </div>
+                            </div>
+                            <div class="galeria-imagen">
+                                <img src="../images/elevapor-square.jpg" alt="Elevapor">
+                                <div class="overlay">
+                                    <h4><span>Elevapor</span></h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fila-galeria">
+                            <div class="galeria-imagen">
+                                <img src="../images/chefshelf-square.jpg" alt="Chef-Shelf">
+                                <div class="overlay">
+                                    <h4><span>Chef-Shelf</span></h4>
+                                </div>
+                            </div>
+                            <div class="galeria-imagen">
+                                <img src="../images/greenpath-square.jpg" alt="Greenpath">
+                                <div class="overlay">
+                                    <h4><span>Greenpath</span></h4>
+                                </div>
+                            </div>
+                            <div class="galeria-imagen">
+                                <img src="../images/ledlend-square.jpg" alt="Ledlend">
+                                <div class="overlay">
+                                    <h4><span>Ledlend</span></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="wireframe" class="diapositiva fondo-gris color-oscuro">
+                <div class="slider">
+                    <div class="slides">
+                        <div class="slide active">
+                            <div class="titulo color-oscuro">
+                                <div class="subtitulo">
+                                    <h2>Arquitectura de la Información</h2>
+                                    <p>El contenido se encuentra organizado y estructurado de manera coherente en diferentes pantallas navegables del sitio web:</p>
+                                </div>
+                                <div>
+                                    <ul class="fila margen-sup">
+                                        <li class="boton"><a href="https://santinxo.github.io/" target="_blank">Home</a></li>
+                                        <li class="boton"><a href="https://santinxo.github.io/projects.html" target="_blank">Projects</a></li>
+                                        <li class="boton"><a href="https://santinxo.github.io/about.html" target="_blank">About</a></li>
+                                        <li class="boton"><a href="https://santinxo.github.io/contact.html" target="_blank">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="titulo color-oscuro">
+                                <div class="subtitulo">
+                                    <h2>Wireframe Para Computadoras</h2>
+                                </div>
+                                <div class="galeria">
+                                    <div class="fila-galeria">
+                                        <div class="galeria-imagen galeria-imagen-grande">
+                                            <img src="imagenes/w-c-home.jpg" alt="Wireframe Computers Home" title="Wireframe de la pantalla de inicio">
+                                        </div>
+                                        <div class="galeria-imagen galeria-imagen-grande">
+                                            <img src="imagenes/w-c-projects.jpg" alt="Wireframe Computers Projects" title="Wireframe de la pantalla de proyectos">
+                                        </div>
+                                        <div class="galeria-imagen galeria-imagen-grande">
+                                            <img src="imagenes/w-c-about.jpg" alt="Wireframe Computers About Me" title="Wireframe de la pantalla de sobre mi">
+                                        </div>
+                                        <div class="galeria-imagen galeria-imagen-grande">
+                                            <img src="imagenes/w-c-contact.jpg" alt="Wireframe Computers Contact" title="Wireframe de la pantalla de contacto">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="titulo color-oscuro">
+                                <div class="titulo color-oscuro">
+                                    <div class="subtitulo">
+                                        <h2>Wireframe Para Móviles</h2>
+                                    </div>
+                                    <div class="galeria">
+                                        <div class="fila-galeria">
+                                            <div class="galeria-imagen galeria-imagen-chica">
+                                                <img src="imagenes/w-m-navegador.jpg" alt="Wireframe Menu" title="Wireframe del menú navegador">
+                                            </div>
+                                            <div class="galeria-imagen galeria-imagen-chica">
+                                                <img src="imagenes/w-m-home.jpg" alt="Wireframe Home" title="Wireframe de la pantalla de inicio">
+                                            </div>
+                                            <div class="galeria-imagen galeria-imagen-chica">
+                                                <img src="imagenes/w-m-projects.jpg" alt="Wireframe Projects" title="Wireframe de la pantalla de proyectos">
+                                            </div>
+                                            <div class="galeria-imagen galeria-imagen-chica">
+                                                <img src="imagenes/w-m-about.jpg" alt="Wireframe About Me" title="Wireframe de la pantalla de sobre mi">
+                                            </div>
+                                            <div class="galeria-imagen galeria-imagen-chica">
+                                                <img src="imagenes/w-m-contact.jpg" alt="Wireframe Contact" title="Wireframe de la pantalla de contacto">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+                </div>
+            </section>
+            <section id="diseno" class="diapositiva centrado">
+                <div class="titulo color-oscuro">
+                    <div>
+                        <h2>Diseño del Sitio Web</h2>
+                        <div class="subtitulo margen-sup">
+                            <p>Se utilizaron contrastes altos y tamaños de fuente legibles con la tipografía sans serif <a class="color-oscuro" href="https://fonts.google.com/specimen/Lato?query=Lato">Lato</a> para garantizar que el contenido sea cómodo de navegar y leer</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Paleta Cromática</h3>
+                        <div class="paleta-colores margen-sup">
+                            <div class="diseno-negro">
+                                <h5>#272727</h5>
+                            </div>
+                            <div class="diseno-gris">
+                                <h5>#E3E3E3</h5>
+                            </div>
+                            <div class="diseno-blanco">
+                                <h5>#F3F3F3</h5>
+                            </div>
+                            <div class="diseno-amarillo">
+                                <h5>#FFDE59</h5>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="sitio-web" class="diapositiva-final centrado fondo-oscuro">
+                <div class="titulo">
+                    <a class="link-texto" href="https://santinxo.github.io/"><h2>> Ir al Sitio Web</h2></a>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="copyright">
+            <p>© 2024 | Designed and Developed By <a href="https://santinxo.github.io/">Santino Giorgetti</a> | All rights reserved</p>
+                <div class="footer-icons">
+                    <ul class="social-icons">
+                        <li><a href="https://www.linkedin.com/in/santino-giorgetti-55a9ab240/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                        <li><a href="https://www.instagram.com/santinogiorgetti/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="https://x.com/SantinoGiorget1" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <script src="presentacion.js"></script>
+    </body>
+</html>
